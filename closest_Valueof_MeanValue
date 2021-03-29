@@ -1,0 +1,22 @@
+def find_closest_to_mean (l1) :
+    total =0
+    closest_num=None
+    min_diff= float("inf")
+    for num in l1 :
+        total=total+num
+
+    mean_value = total/len(l1)
+    
+
+
+    return l1[min(range(len(l1)), key = lambda i: abs(l1[i]-mean_value))] 
+
+if __name__=="__main__" :
+    n=int(input())
+    mylist=[]
+    for i in range(0,n) :
+        x=int(input())
+        mylist.append(x)
+    
+result=find_closest_to_mean(mylist)
+print(result)
