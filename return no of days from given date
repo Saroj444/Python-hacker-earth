@@ -1,0 +1,40 @@
+def leap(yy):
+	
+	if strdate[2]%4==0 and strdate[2]%100==0 or strdate[2]%4==0:
+		feb_days=29
+	else : 
+		feb_days=28
+
+	return feb_days
+
+def days(my_string):
+
+	c=leap(my_string[2])
+
+	for i in range(my_string[1]):
+			
+			if(my_string[1])==1:
+				my_string[1]=0
+			if(my_string[1])==2:
+				my_string[1]=31
+			if(my_string[1])==3:
+				my_string[1]=31+c
+			if(my_string[1])==4:
+				my_string[1]=31+c+31
+			if(my_string[1])==5:
+				my_string[1]=31+c+31+30
+			if(my_string[1])==6:
+				my_string[1]=31+c+31+30+31
+
+			
+			
+			
+	return (my_string[0]+my_string[1])
+
+
+if __name__=="__main__" :
+	strdate=str(input())
+	strdate=map(int, strdate.split('/'))
+	 
+result=days(strdate)
+print(result)
