@@ -1,0 +1,53 @@
+flag = 'a'
+
+ans = ''
+
+str=input()
+
+a = list(str)
+
+for i in a:
+
+    if i != 'A' and i != 'G' and i != 'C' and i != 'T':
+
+        flag += 'b'
+
+    if i=='A':
+
+        ans += 'U'
+
+    elif i=='G':
+
+        ans += 'C'
+
+    elif i=='C':
+
+        ans += 'G'
+
+    elif i=='T':
+
+        ans += 'A'
+
+
+ 
+
+if (flag == 'a'):
+
+    print(ans)
+
+else:
+
+    print("Invalid Input")
+
+
+
+
+
+
+
+
+
+
+
+
+
