@@ -1,0 +1,19 @@
+from array import *
+arr = array('i' , [])
+n= int(input("enter lenghth of array"))
+
+for i in range(n) :
+	x=int(input())
+	arr.append(x)
+
+
+print(arr)
+for j in range(0,n) :
+	for k in range(j+1,n) :
+		if (arr[j]>arr[k]) :
+			arr[j],arr[k]=arr[k],arr[j]
+
+print(arr)
+
+print(max(arr))
+print(arr[-3])
